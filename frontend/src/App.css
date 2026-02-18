@@ -11,22 +11,75 @@ html,body{
   --border-color: #dee2e6;
 }
 
+/* Background colors - Light theme */
 .light .bg-richblack-900 { background-color: #faf8f5 !important; }
-.light .bg-richblack-800 { background-color: #2d3748 !important; }
-.light .bg-richblack-700 { background-color: #4a5568 !important; }
-.light .bg-richblack-600 { background-color: #718096 !important; }
-.light .bg-richblack-5 { background-color: #faf8f5 !important; }
+.light .bg-richblack-800 { background-color: #ffffff !important; }
+.light .bg-richblack-700 { background-color: #f7f7f7 !important; }
+.light .bg-richblack-600 { background-color: #e8e8e8 !important; }
+.light .bg-richblack-500 { background-color: #d1d5db !important; }
+.light .bg-richblack-400 { background-color: #9ca3af !important; }
+.light .bg-richblack-300 { background-color: #6b7280 !important; }
+.light .bg-richblack-200 { background-color: #4b5563 !important; }
+.light .bg-richblack-100 { background-color: #e5e7eb !important; }
+.light .bg-richblack-50 { background-color: #f3f4f6 !important; }
+.light .bg-richblack-25 { background-color: #f9fafb !important; }
+.light .bg-richblack-5 { background-color: #ffffff !important; }
 
-.light .text-richblack-5 { color: #1a202c !important; }
-.light .text-richblack-25 { color: #2d3748 !important; }
-.light .text-richblack-100 { color: #4a5568 !important; }
-.light .text-richblack-900 { color: #1a202c !important; }
-.light .text-white { color: #1a202c !important; }
-.light .text-gray-100 { color: #2d3748 !important; }
-.light .text-gray-200 { color: #4a5568 !important; }
+/* Text colors - Light theme (inverted for readability) */
+.light .text-richblack-5 { color: #1f2937 !important; }
+.light .text-richblack-25 { color: #374151 !important; }
+.light .text-richblack-50 { color: #4b5563 !important; }
+.light .text-richblack-100 { color: #4b5563 !important; }
+.light .text-richblack-200 { color: #374151 !important; }
+.light .text-richblack-300 { color: #4b5563 !important; }
+.light .text-richblack-400 { color: #6b7280 !important; }
+.light .text-richblack-500 { color: #6b7280 !important; }
+.light .text-richblack-600 { color: #4b5563 !important; }
+.light .text-richblack-700 { color: #374151 !important; }
+.light .text-richblack-800 { color: #1f2937 !important; }
+.light .text-richblack-900 { color: #111827 !important; }
+.light .text-white { color: #1f2937 !important; }
+.light .text-gray-100 { color: #374151 !important; }
+.light .text-gray-200 { color: #4b5563 !important; }
 
-.light .border-richblack-700 { border-color: #dee2e6 !important; }
-.light .border-b-richblack-700 { border-bottom-color: #dee2e6 !important; }
+/* Border colors - Light theme */
+.light .border-richblack-900 { border-color: #e5e7eb !important; }
+.light .border-richblack-800 { border-color: #e5e7eb !important; }
+.light .border-richblack-700 { border-color: #d1d5db !important; }
+.light .border-richblack-600 { border-color: #d1d5db !important; }
+.light .border-richblack-500 { border-color: #9ca3af !important; }
+.light .border-richblack-400 { border-color: #9ca3af !important; }
+.light .border-b-richblack-700 { border-bottom-color: #d1d5db !important; }
+.light .border-b-richblack-600 { border-bottom-color: #d1d5db !important; }
+.light .border-y-richblack-500 { border-top-color: #d1d5db !important; border-bottom-color: #d1d5db !important; }
+
+/* Shadow colors - Light theme */
+.light .shadow-richblack-600 { --tw-shadow-color: #d1d5db !important; }
+.light .shadow-richblack-500 { --tw-shadow-color: #9ca3af !important; }
+
+/* Hover states - Light theme */
+.light .hover\:bg-richblack-900:hover { background-color: #f3f4f6 !important; }
+.light .hover\:bg-richblack-800:hover { background-color: #f9fafb !important; }
+.light .hover\:bg-richblack-700:hover { background-color: #e5e7eb !important; }
+.light .hover\:bg-richblack-600:hover { background-color: #d1d5db !important; }
+.light .hover\:bg-richblack-500:hover { background-color: #d1d5db !important; }
+.light .hover\:bg-richblack-50:hover { background-color: #e5e7eb !important; }
+.light .group-hover\:bg-richblack-900 { background-color: #f3f4f6 !important; }
+
+/* Focus states - Light theme */
+.light .focus\:bg-richblack-800:focus { background-color: #ffffff !important; }
+.light .focus\:border-richblack-700:focus { border-color: #d1d5db !important; }
+
+/* Form inputs - Light theme */
+.light input, .light textarea, .light select {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+.light input::placeholder, .light textarea::placeholder {
+  color: #9ca3af !important;
+}
+.light .placeholder-richblack-400::placeholder { color: #9ca3af !important; }
 
 /* Logo visibility in light theme */
 .light img[alt="Logo"] {
@@ -38,10 +91,107 @@ html,body{
 .group:hover .group-hover\:opacity-100 { opacity: 1 !important; }
 .group:hover .group-hover\:translate-y-\[1\.65em\] { transform: translateX(-50%) translateY(1.65em) !important; }
 
-/* Light theme dropdown overrides */
-.light .bg-richblack-5 { background-color: #ffffff !important; }
-.light .text-richblack-900 { color: #1a202c !important; }
-.light .hover\:bg-richblack-50:hover { background-color: #f3f4f6 !important; }
+/* Navbar specific - Light theme */
+.light .bg-richblack-800.border-b-richblack-700 {
+  background-color: #ffffff !important;
+  border-bottom-color: #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Cards and containers - Light theme */
+.light .rounded-xl.bg-richblack-800,
+.light .rounded-lg.bg-richblack-800,
+.light .rounded-md.bg-richblack-800 {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Course cards - Light theme */
+.light .bg-richblack-800.rounded-lg {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Sidebar - Light theme */
+.light .min-w-\[222px\].bg-richblack-800 {
+  background-color: #f9fafb !important;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Modal backdrop fix */
+.light .bg-richblack-900.bg-opacity-10 {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Yellow elements should stay yellow */
+.light .bg-yellow-50, .light .bg-yellow-25, .light .bg-yellow-100 {
+  background-color: inherit;
+}
+.light .text-yellow-50, .light .text-yellow-25, .light .text-yellow-5 {
+  color: inherit;
+}
+.light .border-yellow-50, .light .border-b-yellow-25 {
+  border-color: inherit;
+}
+
+/* Keep video player dark */
+.light video, .light .video-player {
+  filter: none !important;
+}
+
+/* Code blocks should stay dark */
+.light .code-border, .light .codeblock1, .light .codeblock2 {
+  filter: none !important;
+}
+.light pre, .light code {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+}
+
+/* Pure greys - Light theme */
+.light .bg-pure-greys-5 { background-color: #f9fafb !important; }
+.light .bg-pure-greys-25 { background-color: #f3f4f6 !important; }
+.light .bg-pure-greys-50 { background-color: #e5e7eb !important; }
+.light .bg-pure-greys-100 { background-color: #d1d5db !important; }
+.light .bg-pure-greys-200 { background-color: #9ca3af !important; }
+.light .bg-pure-greys-300 { background-color: #6b7280 !important; }
+.light .bg-pure-greys-400 { background-color: #4b5563 !important; }
+.light .bg-pure-greys-500 { background-color: #374151 !important; }
+.light .bg-pure-greys-600 { background-color: #1f2937 !important; }
+.light .bg-pure-greys-700 { background-color: #111827 !important; }
+.light .bg-pure-greys-800 { background-color: #e5e7eb !important; }
+.light .text-pure-greys-300 { color: #6b7280 !important; }
+.light .text-pure-greys-500 { color: #374151 !important; }
+
+/* Scrollbar - Light theme */
+.light ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.light ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.light ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Tables - Light theme */
+.light table {
+  border-color: #e5e7eb !important;
+}
+.light th, .light td {
+  border-color: #e5e7eb !important;
+}
+
+/* Progress bar - Light theme */
+.light .bg-richblack-700 .bg-caribbeangreen-200,
+.light .bg-richblack-700 .bg-yellow-50 {
+  background-color: inherit !important;
+}
 
 .code-border {
   border: 2px solid;
