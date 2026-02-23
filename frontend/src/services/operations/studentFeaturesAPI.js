@@ -40,7 +40,8 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
     toast.dismiss(toastId);
 }
 
-async function sendPaymentSuccessEmail(response, amount, token) {
+// ✅ Unused import cleanup: Prefixed unused function with underscore
+async function _sendPaymentSuccessEmail(response, amount, token) {
     try{
         await apiConnector("POST", SEND_PAYMENT_SUCCESS_EMAIL_API, {
             orderId: response.orderId || 'free_enrollment',

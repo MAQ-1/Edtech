@@ -1,5 +1,6 @@
 import { toast } from "react-hot-toast"
-import { setLoading, setUser } from "../../slices/profileSlice"
+// ✅ Unused import cleanup: Removed unused setLoading
+import { setUser } from "../../slices/profileSlice"
 import { apiConnector } from "../apiconnector"
 import { settingsEndpoints } from "../api"
 import { logout } from "./authAPI"

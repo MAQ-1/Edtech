@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 
-import { updateCompletedLectures } from "../../slices/viewCourseSlice"
+// ✅ Unused import cleanup: Removed unused imports
 // import { setLoading } from "../../slices/profileSlice";
 import { apiConnector } from "../apiconnector"
 import { courseEndpoints } from "../api"
@@ -22,7 +22,8 @@ const {
   GET_FULL_COURSE_DETAILS_AUTHENTICATED,
   CREATE_RATING_API,
   LECTURE_COMPLETION_API,
-  UPDATE_PROGRESS_API,
+  // ✅ Unused import cleanup: Commented out unused constant
+  // UPDATE_PROGRESS_API,
 } = courseEndpoints
 
 export const getAllCourses = async () => {

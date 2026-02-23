@@ -2,7 +2,8 @@ import { toast } from "react-hot-toast"
 
 import { setLoading, setToken } from "../../slices/authSlice"
 import { resetCart } from "../../slices/cartSlice"
-import { setUser, setLoading as setProfileLoading } from "../../slices/profileSlice"
+// ✅ Unused import cleanup: Removed unused setProfileLoading alias
+import { setUser } from "../../slices/profileSlice"
 import { apiConnector } from "../apiconnector"
 import { endpoints } from "../api"
 
