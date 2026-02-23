@@ -57,10 +57,11 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function(origin, callback) {
+    // ✅ Render root health fix: Allow requests without origin (direct browser access)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(null, false); // Don't throw error, just deny
     }
   },
   methods: ["GET", "POST", "PUT", "DELETE"],
