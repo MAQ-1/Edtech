@@ -56,5 +56,11 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
+  },
+  "overrides": {
+    "react-scripts": {
+      "@svgr/webpack": "^8.1.0",
+      "workbox-webpack-plugin": "^7.0.0"
+    }
   }
 }
