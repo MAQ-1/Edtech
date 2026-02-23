@@ -75,8 +75,10 @@ app.use(fileUpload({
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// ✅ DEPLOYMENT FIX: Prevent NoSQL injection
-app.use(mongoSanitize());
+// ✅ DEPLOYMENT FIX: Prevent NoSQL injection (replaceWith mode to avoid read-only errors)
+app.use(mongoSanitize({
+  replaceWith: '_'
+}));
 
 // ✅ DEPLOYMENT FIX: Global rate limiter (100 requests per 15 minutes)
 const globalLimiter = rateLimit({
