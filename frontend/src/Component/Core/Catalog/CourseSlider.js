@@ -2,7 +2,8 @@ import React from 'react'
 import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 
-import Course_Card from './Course_Card'
+// ✅ Vercel CI lint fix: Renamed to PascalCase
+import CourseCard from './Course_Card'
 
 const CourseSlider = ({Courses}) => {
   return (
@@ -22,10 +23,10 @@ const CourseSlider = ({Courses}) => {
           }}
           className="max-h-[30rem]"
         >
-          // amazonq-ignore-next-line
+          {/* ✅ Vercel CI lint fix: Proper JSX comment syntax */}
           {Courses?.map((course, i) => (
             <SwiperSlide key={i}>
-              <Course_Card course={course} Height={"h-[250px]"} />
+              <CourseCard course={course} Height={"h-[250px]"} />
             </SwiperSlide>
           ))}
         </Swiper>
