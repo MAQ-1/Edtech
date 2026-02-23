@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:4000/api/v1"
+// ✅ Vercel deployment fix: Use environment variable for production
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:4000/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
