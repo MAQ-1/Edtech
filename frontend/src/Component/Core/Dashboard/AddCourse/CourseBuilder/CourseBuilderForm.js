@@ -23,15 +23,13 @@ const CourseBuilderForm = () => {
   const{register,handleSubmit,setValue,formState:{errors}}=useForm()
   const[editSectionName,setEditSectionName]=useState(false)
   const {course}=useSelector((state)=>state.course || {}) 
-  const[loading,setLoading]=useState(false);
+  // ✅ Unused import cleanup: Removed unused loading state
   const { token } = useSelector((state) => state.auth)
   const dispatch=useDispatch();
   
 
 
   const onSubmit= async(data)=>{
-   setLoading(true);
-   
    console.log('CourseBuilderForm - onSubmit called');
    console.log('CourseBuilderForm - course from Redux:', course);
    console.log('CourseBuilderForm - course._id:', course?._id);
@@ -40,7 +38,6 @@ const CourseBuilderForm = () => {
    if (!course || !course._id) {
      console.log('CourseBuilderForm - Course validation failed');
      toast.error("Course not found. Please create a course first.");
-     setLoading(false);
      return;
    }
 
@@ -71,7 +68,6 @@ const CourseBuilderForm = () => {
       setEditSectionName(null)
       setValue("sectionName", "")
     }
-    setLoading(false)
   }
 
 
@@ -117,7 +113,7 @@ const CourseBuilderForm = () => {
 
                <div className="flex flex-col space-y-2">
 
-                   // amazonq-ignore-next-line
+                   {/* ✅ Unused import cleanup: Fixed JSX comment syntax */}
                    <label className="text-sm text-richblack-5" htmlFor="sectionName">Section Name <sup className="text-pink-200">*</sup></label>
                    <input
                    id='sectionName'

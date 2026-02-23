@@ -37,13 +37,14 @@ const SubSectionModal = ({
        const [loading, setLoading] = useState(false);
 
 
+      // ✅ Unused import cleanup: Added missing dependencies
       useEffect(()=>{
         if(edit || view){
              setValue("lectureTitle", modalData?.title || "")
              setValue("lectureDesc", modalData.description)
               setValue("lectureVideo", modalData.videoUrl)     
         }
-      },[]);
+      },[edit, view, modalData?.title, modalData.description, modalData.videoUrl, setValue]);
 
       const isFormUpdated = () => {
          const currentValues = getValues();
