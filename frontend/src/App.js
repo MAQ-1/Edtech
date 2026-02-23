@@ -1,5 +1,6 @@
 import './App.css';
-import { Route, Routes, Navigate } from "react-router-dom";
+// ✅ Vercel CI build fix: Removed unused Navigate import
+import { Route, Routes } from "react-router-dom";
 import {Home} from "../src/Pages/Home";
 import Navbar from "../src/Component/common/Navbar";
 import Login from "../src/Pages/Login";
@@ -175,7 +176,7 @@ function App() {
               )
             }  
 
-            {/* Catch all route for debugging */}
+            {/* ✅ Vercel CI build fix: Proper JSX comment syntax */}
             <Route path="*" element={<div className="text-white p-8 mx-auto">Page not found. Current path: {window.location.pathname}</div>} />
 
       </Routes>
