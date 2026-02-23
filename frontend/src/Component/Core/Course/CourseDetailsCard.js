@@ -15,10 +15,10 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse, hand
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  // ✅ Unused import cleanup: Removed unused courseId variable
   const {
     thumbnail: ThumbnailImage,
     price: CurrentPrice,
-    _id: courseId,
   } = course
 
   const handleShare = () => {

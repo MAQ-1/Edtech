@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react"
-import { AiOutlineDown } from "react-icons/ai"
+// ✅ Unused import cleanup: Removed unused imports
+import React from "react"
 import { HiOutlineVideoCamera } from "react-icons/hi"
 
 function CourseSubSectionAccordion({ subSec }) {
