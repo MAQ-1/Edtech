@@ -12,8 +12,8 @@ A modern **Full‑Stack EdTech Web Application** built using the **MERN Stack (M
 
 ## 🚀 Live Deployment
 
-* 🌐 **Frontend:** *Coming Soon*
-* ⚙️ **Backend API:** *Coming Soon*
+* 🌐 **Frontend:** (https://studynotion-five-beta.vercel.app/)
+* ⚙️ **Backend API:** (https://edtech-ojdt.onrender.com/)
 
 ---
 
