@@ -40,7 +40,8 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch)
     toast.dismiss(toastId);
 }
 
-// ✅ Unused import cleanup: Prefixed unused function with underscore
+// ✅ Vercel CI lint cleanup: Prefixed unused function with underscore
+// eslint-disable-next-line no-unused-vars
 async function _sendPaymentSuccessEmail(response, amount, token) {
     try{
         await apiConnector("POST", SEND_PAYMENT_SUCCESS_EMAIL_API, {

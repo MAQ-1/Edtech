@@ -42,7 +42,7 @@ const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
         {/* Flow Chart */}
         <div className="flex items-center gap-2 text-[16px]">
           <ImTree />
-          // amazonq-ignore-next-line
+          {/* ✅ Vercel CI lint cleanup */}
           <p>{cardData?.lessionNumber} Lession</p>
           
         </div>

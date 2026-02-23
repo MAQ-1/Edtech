@@ -2,13 +2,12 @@ import React from 'react'
 import * as Icons from "react-icons/vsc"
 import { useLocation, NavLink } from 'react-router-dom'
 // import { resetCourseState } from "../../../slices/courseSlice"
-import { useDispatch } from 'react-redux'
 
+// ✅ Vercel CI lint cleanup - Removed unused dispatch
 const SidebarLink = ({ link, iconName }) => {
 
      const Icon = Icons[iconName];
      const location = useLocation();
-     const dispatch = useDispatch();
 
      const matchRoute = (route) => {
     return location.pathname === route

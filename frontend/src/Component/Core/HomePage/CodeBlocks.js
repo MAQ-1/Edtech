@@ -1,5 +1,4 @@
 import React from 'react'
-import {HighlightText} from './HighlightText'
 import {FaArrowRight} from "react-icons/fa"
 import CTAButton from "./CTAButton"
 import {TypeAnimation} from 'react-type-animation'

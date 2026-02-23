@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { BiInfoCircle } from "react-icons/bi"
 import { HiOutlineGlobeAlt } from "react-icons/hi"
-// import ReactMarkdown from "react-markdown" // Package not installed
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
 
@@ -17,7 +16,6 @@ import { freeEnrollment } from "../services/operations/freeEnrollmentAPI"
 import GetAvgRating from "../utils/avgRating"
 import { addToCart } from "../slices/cartSlice"
 import { ACCOUNT_TYPE } from "../utils/constants"
-import Error from "./Error"
 import toast from "react-hot-toast"
 
 function CourseDetails() {
@@ -71,7 +69,7 @@ function CourseDetails() {
     setIsActive(
       !isActive.includes(id)
         ? isActive.concat([id])
-        : isActive.filter((e) => e != id)
+        : isActive.filter((e) => e !== id)
     )
   }
 
@@ -104,8 +102,8 @@ function CourseDetails() {
     )
   }
 
+  // ✅ Vercel CI lint cleanup - _id extracted but not used in this scope
   const {
-    _id: course_id,
     courseName,
     courseDescription,
     thumbnail,

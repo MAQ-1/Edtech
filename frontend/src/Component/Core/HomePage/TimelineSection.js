@@ -49,7 +49,6 @@ const TimelineSection = () => {
                   </div>
                 </div>
                 <div
-                  // amazonq-ignore-next-line
                   className={`hidden ${
                     TimeLine.length - 1 === i ? "hidden" : "lg:block"
                   }  h-14 border-dotted border-r border-richblack-100 bg-richblack-400/0 w-[26px]`}
@@ -75,7 +74,7 @@ const TimelineSection = () => {
                 types of courses
               </h1>
             </div>
-            // amazonq-ignore-next-line
+            {/* ✅ Vercel CI lint cleanup */}
             <div></div>
           </div>
           <img

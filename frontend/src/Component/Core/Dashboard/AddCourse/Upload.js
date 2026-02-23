@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { useDropzone } from "react-dropzone"
 import { FiUploadCloud } from "react-icons/fi"
-import { useSelector } from "react-redux"
 
 export default function Upload({
   name,
@@ -42,7 +41,8 @@ export default function Upload({
     }
   }
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  // ✅ Vercel CI lint cleanup - Removed unused getRootProps
+  const { getInputProps, isDragActive } = useDropzone({
     accept: both 
       ? { "image/*": [".jpeg", ".jpg", ".png"], "video/*": [".mp4", ".mov", ".avi"] }
       : video 

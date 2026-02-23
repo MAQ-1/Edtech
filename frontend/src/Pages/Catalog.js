@@ -4,10 +4,8 @@ import { useParams } from 'react-router-dom'
 import { apiConnector } from '../services/apiconnector';
 import { categories } from '../services/api';
 import { getCatalogaPageData } from '../services/operations/pageAndComponentData';
-import Course_Card from '../Component/Core/Catalog/Course_Card';
+import CourseCard from '../Component/Core/Catalog/Course_Card';
 import CourseSlider from '../Component/Core/Catalog/CourseSlider';
-import { useSelector } from "react-redux"
-import Error from "./Error"
 
 const Catalog = () => {
   
@@ -26,7 +24,7 @@ const Catalog = () => {
 
          const decodedCatalogName = decodeURIComponent(catalogName);
          const category_id= res?.data?.data?.filter((ct)=>{
-           const normalizedName = ct.name.toLowerCase().replace(/[\s\/]+/g, '-').replace(/[^a-z0-9-]/g, '');
+           const normalizedName = ct.name.toLowerCase().replace(/[\s]+/g, '-').replace(/[^a-z0-9-]/g, '');
            return normalizedName === decodedCatalogName || ct.name.split(" ").join("-").toLowerCase() === catalogName;
          })[0];
 
@@ -151,7 +149,7 @@ const Catalog = () => {
                   {catalogPageData?.data?.mostSellingCourses
                     ?.slice(0, 4)
                     .map((course, i) => (
-                      <Course_Card course={course} key={i} Height={"h-[400px]"} />
+                      <CourseCard course={course} key={i} Height={"h-[400px]"} />
                     ))}
                 </div>
               ) : (

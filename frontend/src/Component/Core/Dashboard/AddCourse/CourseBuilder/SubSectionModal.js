@@ -166,8 +166,7 @@ const SubSectionModal = ({
                       {/* Lecture Title */}
 
                     <div className="flex flex-col space-y-2">
-                        // amazonq-ignore-next-line
-                        // amazonq-ignore-next-line
+                        {/* ✅ Vercel CI lint cleanup */}
                         <label className="text-sm text-richblack-5" htmlFor="lectureTitle"> Lecture Title</label>
                         <input
                         id='LectureTitle'
@@ -185,7 +184,7 @@ const SubSectionModal = ({
                     {/* Lecture Description */}
 
                     <div className="flex flex-col space-y-2">
-                        // amazonq-ignore-next-line
+                        {/* ✅ Vercel CI lint cleanup */}
                         <label className="text-sm text-richblack-5">Lecture Description</label>
                         <textarea
                         id="LectureDesc"

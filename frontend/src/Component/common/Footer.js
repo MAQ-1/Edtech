@@ -52,7 +52,7 @@ const Footer = () => {
                 <FaTwitter />
                 <FaYoutube />
               </div>
-              // amazonq-ignore-next-line
+              {/* ✅ Vercel CI lint cleanup */}
               <div></div>
             </div>
 

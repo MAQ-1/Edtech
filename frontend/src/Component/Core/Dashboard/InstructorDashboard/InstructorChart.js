@@ -143,7 +143,7 @@ export default function InstructorChart({ courses }) {
         .animate-fadeIn {
           animation: fadeIn 0.5s ease-out;
         }
-        .hover\:scale-102:hover {
+        .hover\\:scale-102:hover {
           transform: scale(1.02);
         }
       `}</style>

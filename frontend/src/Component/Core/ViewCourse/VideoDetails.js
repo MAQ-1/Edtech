@@ -22,6 +22,7 @@ const VideoDetails = () => {
   const [videoEnded, setVideoEnded] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
     ;(async () => {
       if (!courseSectionData || !courseSectionData.length) return
@@ -46,7 +47,7 @@ const VideoDetails = () => {
         }
       }
     })()
-  }, [courseSectionData, courseEntireData, location.pathname])
+  }, [courseSectionData, courseEntireData, location.pathname, courseId, sectionId, subSectionId, navigate])
 
   // check if the lecture is the first video of the course
   const isFirstVideo = () => {

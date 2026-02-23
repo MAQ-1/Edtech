@@ -20,26 +20,28 @@ export default function ChipInput({
   // Setting up state for managing chips array
   const [chips, setChips] = useState([])
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
     if (editCourse && course) {
-      // console.log(course)
       setChips(course?.tag || [])
     }
     register(name, { required: false })
     
-  }, [])
+  }, [editCourse, course, name, register])
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
 
     setValue(name, [])
   
-  }, [])
+  }, [name, setValue])
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
     console.log('ChipInput - Setting chips value:', chips)
     setValue(name, chips)
 
-  }, [chips])
+  }, [chips, name, setValue])
 
 
   const handleKeyDown = (event) => {

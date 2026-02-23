@@ -18,11 +18,12 @@ export default function PublishCourse() {
   const { course } = useSelector((state) => state.course)
   const [loading, setLoading] = useState(false)
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
     if (course?.status === COURSE_STATUS.PUBLISHED) {
       setValue("public", true)
     }
-  }, [])
+  }, [course?.status, setValue])
 
   const goBack = () => {
     dispatch(setStep(2))

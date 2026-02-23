@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { Outlet, useParams, useNavigate } from "react-router-dom"
+import { Outlet, useParams } from "react-router-dom"
 
 import CourseReviewModal from "../Component/Core/ViewCourse/CourseReviewModal"
 import VideoDetailsSidebar from "../Component/Core/ViewCourse/VideoDetailsSidebar"
@@ -16,7 +16,7 @@ export default function ViewCourse() {
   const { courseId } = useParams()
   const { token } = useSelector((state) => state.auth)
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+  // ✅ Vercel CI lint cleanup - Removed unused navigate
   const [reviewModal, setReviewModal] = useState(false)
 
   useEffect(() => {

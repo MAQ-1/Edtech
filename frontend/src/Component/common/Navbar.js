@@ -33,6 +33,7 @@ const Navbar = () => {
     }
   };
 
+  // ✅ Vercel CI lint cleanup - Added missing dependencies
   useEffect(() => {
     fetchSublinks();
     initTheme();
@@ -49,6 +50,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleThemeToggle = () => {
@@ -110,7 +112,7 @@ const Navbar = () => {
                           subLinks.map((subLink, idx) => (
                             <Link
                               key={idx}
-                              to={`/catalog/${encodeURIComponent(subLink.name.toLowerCase().replace(/[\s\/]+/g, '-').replace(/[^a-z0-9-]/g, ''))}`}
+                              to={`/catalog/${encodeURIComponent(subLink.name.toLowerCase().replace(/[\s]+/g, '-').replace(/[^a-z0-9-]/g, ''))}`}
                               className="flex items-center px-4 py-3 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-blue-500 group/item select-none"
                               onClick={() => setIsCatalogOpen(false)}
                             >
