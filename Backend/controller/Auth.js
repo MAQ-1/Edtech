@@ -127,6 +127,14 @@ exports.SendOtp= async( req , res)=>{
             });
          }
 
+         // ✅ DEPLOYMENT FIX: Validate password strength (min 8 chars)
+         if(password.length < 8) {
+            return res.status(400).json({
+               success: false,
+               message: "Password must be at least 8 characters long"
+            });
+         }
+
          // 2 password match
 
          if(password !== confirmPassword) {
@@ -268,9 +276,12 @@ exports.login = async (req, res)=>{
               
             // create cookie and send response 
 
+            // ✅ DEPLOYMENT FIX: Secure cookie in production
             const options ={
                 expires: new Date(Date.now() + 3*24*60*60*1000),
                 httpOnly:true,
+                secure: process.env.NODE_ENV === 'production', // HTTPS only in production
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
             }
             res.cookie("token",token,options).status(200).json({
                 success:true,
@@ -307,6 +318,14 @@ exports.changePassword= async (req, res)=>{
             return res.status(400).json({
                 success: false,
                 message: "All fields are required"
+            });
+        }
+
+        // ✅ DEPLOYMENT FIX: Validate password strength (min 8 chars)
+        if(newPassword.length < 8) {
+            return res.status(400).json({
+                success: false,
+                message: "Password must be at least 8 characters long"
             });
         }
 
