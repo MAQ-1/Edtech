@@ -1,5 +1,6 @@
 const { contactUsEmail } = require("../mail/contactFormRes")
-const mailSender = require("../utils/mailSender")
+// ✅ RENDER FIX: Linux is case-sensitive - file is 'mailsender.js' not 'mailSender.js'
+const mailSender = require("../utils/mailsender")
 
 exports.contactUsController = async (req, res) => {
   const { email, firstname, lastname, message, phoneNo, countrycode } = req.body
