@@ -12,7 +12,7 @@ A modern **Full‑Stack EdTech Web Application** built using the **MERN Stack (M
 
 ## 🚀 Live Deployment
 
-* 🌐 **Frontend:** [https://frontend-ten-red-86.vercel.app](https://frontend-ten-red-86.vercel.app)
+* 🌐 **Frontend:** [https://studynotion.tanmakumar.me/](https://studynotion.tanmakumar.me/)
 * ⚙️ **Backend API:** [https://edtech-nse3.onrender.com](https://edtech-nse3.onrender.com)
 
 > **Status:** ✅ Both frontend and backend are live and fully functional!
