@@ -24,8 +24,19 @@
   "env": {
     "CI": "false",
     "GENERATE_SOURCEMAP": "false",
-    "REACT_APP_BACKEND_URL": "https://edtech-ojdt.onrender.com/",
-    "REACT_APP_BASE_URL": "https://edtech-ojdt.onrender.com/api/v1",
+    "REACT_APP_BACKEND_URL": "https://edtech-nse3.onrender.com/",
+    "REACT_APP_BASE_URL": "https://edtech-nse3.onrender.com/api/v1",
     "REACT_APP_ENV": "production"
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
