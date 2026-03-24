@@ -74,7 +74,7 @@ exports.courseEnrollmentEmail = (courseName, firstname, lastname) => {
           <p>We’re thrilled to let you know that you have been <strong>successfully enrolled</strong> in the course:</p>
           <p class="highlight">${courseName}</p>
           <p>This is the beginning of your new learning journey. Dive into the lessons, complete challenges, and level up your skills 🚀</p>
-          <a href="http://localhost:3000/dashboard" class="button">Start Learning Now</a>
+          <a href="https://frontend-ten-red-86.vercel.app/dashboard" class="button">Start Learning Now</a>
         </div>
         <div class="footer">
           <p>Need help? Reach out to us at <a href="mailto:support@learnhub.com">support@learnhub.com</a></p>
