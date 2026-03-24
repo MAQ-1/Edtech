@@ -12,8 +12,10 @@ A modern **Full‑Stack EdTech Web Application** built using the **MERN Stack (M
 
 ## 🚀 Live Deployment
 
-* 🌐 **Frontend:** *Coming Soon*
-* ⚙️ **Backend API:** *Coming Soon*
+* 🌐 **Frontend:** [https://frontend-ten-red-86.vercel.app](https://frontend-ten-red-86.vercel.app)
+* ⚙️ **Backend API:** [https://edtech-nse3.onrender.com](https://edtech-nse3.onrender.com)
+
+> **Status:** ✅ Both frontend and backend are live and fully functional!
 
 ---
 
@@ -21,18 +23,26 @@ A modern **Full‑Stack EdTech Web Application** built using the **MERN Stack (M
 
 ### 🎨 Frontend
 
-* React.js
-* Vite
-* Axios
-* Modern Component‑Based UI
+* **React.js** - Component-based UI library
+* **Tailwind CSS** - Utility-first CSS framework
+* **Redux Toolkit** - State management
+* **React Router** - Client-side routing
+* **Axios** - HTTP client for API calls
+* **React Hook Form** - Form handling and validation
+* **React Hot Toast** - Toast notifications
+* **Swiper** - Modern slider component
 
 ### ⚙️ Backend
 
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose ODM
-* RESTful API Design
+* **Node.js** - JavaScript runtime
+* **Express.js** - Web application framework
+* **MongoDB Atlas** - Cloud database
+* **Mongoose** - MongoDB object modeling
+* **JWT** - JSON Web Token authentication
+* **Bcrypt** - Password hashing
+* **Nodemailer** - Email sending
+* **Cloudinary** - Image and file storage
+* **Multer** - File upload handling
 
 ### ☁️ DevOps & Tools
 
@@ -58,12 +68,16 @@ Edtech/
 
 ## ✨ Features
 
-* 📚 Course catalog browsing
-* ⚡ Fast and responsive React UI
-* 🔐 Environment‑protected backend configuration
-* 🌍 Cloud database integration (MongoDB Atlas)
-* 🧩 Modular backend architecture
-* 🔄 REST API communication
+* 📚 **Course Catalog:** Browse and explore available courses
+* 👤 **User Authentication:** Secure login and registration system
+* 🎓 **Course Enrollment:** Free enrollment system for courses
+* � **Email Integration:** Automated email notifications for enrollment and password reset
+* 🎨 **Responsive Design:** Modern UI with Tailwind CSS
+* 🔐 **Secure Backend:** Protected API endpoints with proper authentication
+* 🌍 **Cloud Integration:** MongoDB Atlas database and cloud file storage
+* 🔄 **Real-time Updates:** Dynamic content loading and state management
+* 📱 **Mobile Friendly:** Fully responsive design for all devices
+* ⚡ **Fast Performance:** Optimized React frontend with efficient API calls
 
 ---
 
@@ -80,15 +94,50 @@ Edtech/
 
 ## ⚙️ Environment Variables
 
+### Backend Environment Variables
+
 Create a `.env` file inside the **Backend** directory:
 
-```
+```env
+# Database
 MONGO_URI=your_mongodb_connection_string
-PORT=5000
-NODE_ENV=development
+
+# Server
+PORT=4000
+NODE_ENV=production
+
+# JWT
+JWT_SECRET=your_jwt_secret
+
+# Email Configuration
+MAIL_HOST=smtp.gmail.com
+MAIL_USER=your_email@gmail.com
+MAIL_PASS=your_app_password
+
+# Cloudinary (for file uploads)
+CLOUD_NAME=your_cloudinary_name
+API_KEY=your_cloudinary_api_key
+API_SECRET=your_cloudinary_api_secret
+
+# Razorpay (for payments - optional)
+RAZORPAY_KEY=your_razorpay_key
+RAZORPAY_SECRET=your_razorpay_secret
 ```
 
-⚠️ Never commit `.env` files to GitHub.
+### Frontend Environment Variables
+
+Create a `.env` file inside the **frontend** directory:
+
+```env
+# Backend API URL
+REACT_APP_BASE_URL=https://edtech-nse3.onrender.com/api/v1
+REACT_APP_BACKEND_URL=https://edtech-nse3.onrender.com/
+
+# Environment
+REACT_APP_ENV=production
+```
+
+⚠️ **Security Note:** Never commit `.env` files to GitHub. They are already included in `.gitignore`.
 
 ---
 
@@ -105,33 +154,34 @@ cd Edtech
 
 ### 2️⃣ Backend Setup
 
-```
+```bash
 cd Backend
 npm install
 npm run dev
 ```
 
-Backend runs at:
+Backend runs at: `http://localhost:4000`
 
-```
-http://localhost:5000
-```
+**Available Scripts:**
+- `npm start` - Start production server
+- `npm run dev` - Start development server with nodemon
 
 ---
 
 ### 3️⃣ Frontend Setup
 
-```
+```bash
 cd frontend
 npm install
-npm run dev
+npm start
 ```
 
-Frontend runs at:
+Frontend runs at: `http://localhost:3000`
 
-```
-http://localhost:5173
-```
+**Available Scripts:**
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
 
 ---
 
