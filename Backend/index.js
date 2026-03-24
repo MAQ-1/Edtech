@@ -25,7 +25,11 @@ database.connect();
 // Middleware
 app.use(cookieParser());
 app.use(cors({
-  origin: ["http://localhost:3000", "https://frontend-ten-red-86.vercel.app"],  // Allow both local and production frontend
+  origin: [
+    "http://localhost:3000", 
+    "https://frontend-ten-red-86.vercel.app",
+    "https://studynotion.tanmaykumar.me"
+  ],  // Allow local, vercel, and custom domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

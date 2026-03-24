@@ -32,7 +32,7 @@ exports.resetPasswordToken = async (req , res)=>{
 
 
         // create url 
-       const url=`https://frontend-ten-red-86.vercel.app/update-password/${token}`
+       const url=`https://studynotion.tanmaykumar.me/update-password/${token}`
 
        // send email  (optional: frontend can also send)
        await mailSender(
