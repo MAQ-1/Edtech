@@ -12,7 +12,7 @@ A modern **Full‑Stack EdTech Web Application** built using the **MERN Stack (M
 
 ## 🚀 Live Deployment
 
-* 🌐 **Frontend:** [https://studynotion.tanmakumar.me/](https://studynotion.tanmakumar.me/)
+* 🌐 **Frontend:** [https://studynotion.tanmaykumar.me/](https://studynotion.tanmaykumar.me/)
 * ⚙️ **Backend API:** [https://edtech-nse3.onrender.com](https://edtech-nse3.onrender.com)
 
 > **Status:** ✅ Both frontend and backend are live and fully functional!
